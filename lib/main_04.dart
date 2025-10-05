@@ -4,37 +4,27 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  int number = 0;
-
-  void tekanTombol() {
-    setState(() {
-      number = number + 1;
-    });
-  }
-
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Stateful Widget Demo")),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(number.toString(), style: TextStyle(fontSize: 30)),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: tekanTombol,
-                child: Text("Tambah Bilangan"),
-              ),
-            ],
-          ),
+        appBar: AppBar(title: Text("Latihan Row dan Column")),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text("Text 1"),
+            Text("Text 2"),
+            Text("Text 3"),
+            Row(
+              children: <Widget>[
+                Text("Text 1"),
+                Text("Text 2"),
+                Text("Text 3"),
+              ],
+            ),
+          ],
         ),
       ),
     );
