@@ -1,4 +1,3 @@
-import 'package:aplikasi_hello_world/main_02.dart';
 import 'package:flutter/material.dart';
 
 void main() {

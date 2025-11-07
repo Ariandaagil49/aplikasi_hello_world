@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-TextEditingController controller = TextEditingController();
-
 void main() {
   runApp(MyApp());
 }
@@ -14,6 +12,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
